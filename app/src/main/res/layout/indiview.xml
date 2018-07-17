@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_weight="0.2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:id="@+id/iv1"
+        android:src="@drawable/ic_image_black_24dp"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.7"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="File Name"
+            android:id="@+id/tv1"
+            android:textSize="20sp"
+            android:textColor="#2b2b2e"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="File Size"
+            android:id="@+id/tv2"
+            android:textSize="20sp"
+            android:textColor="#2b2b2e"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:background="@drawable/ic_delete_black_24dp"/>
+
+</LinearLayout>
