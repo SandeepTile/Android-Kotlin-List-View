@@ -2,11 +2,14 @@ package com.example.sandy.gallerydemo
 
 import android.Manifest
 import android.app.Activity
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
@@ -53,6 +56,15 @@ class MainActivity : AppCompatActivity() {
 
             path="storage/emulated/0/WhatsApp/Media/WhatsApp Images/"
             file= File(path)
+
+            if (!file.exists()){
+                  val i= Intent()
+                    i.action=Intent.ACTION_VIEW
+                    i.data= Uri.parse("https://play.google.com/store/apps/details?id=com.whatsapp")
+                    startActivity(i)
+
+                Log.i("Whatsapp","Error")
+            }
 
         }
 
